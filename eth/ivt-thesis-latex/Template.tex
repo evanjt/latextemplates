@@ -1,0 +1,130 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% IVT LaTeX template
+%%   Joseph Molloy
+%%   joseph.molloy@ivt.baug.ethz.ch
+%%   
+%%   Updates
+%%    1.07.2019 | First version of overleaf compatible template for IVT
+%%   15.12.1019 | Add german abstract page and fix bug in figure indenting.
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% This is an example for writing a paper at the IVT.
+%% It supports English and German language.
+%% By using it, it is possible to switch paper layouts easily
+%% (e.g., working paper style into TRB style)
+%%
+%% Include german option in document class for german headings (i.e. Literatur)
+%% \documentclass[numbered, german]{ivt-style/standard}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%
+\documentclass[numbered]{ivt-style/standard}
+%\documentclass{ivt-style/trb}
+
+\RequirePackage[capitalize]{cleveref}
+\RequirePackage{booktabs}
+
+\providecommand{\ivthline}{}
+
+\title{The title of the paper}
+\subtitle{Do you really need a subtitle?}
+\papertype{The type of paper}
+
+\headingstitle{A Short title for the header}
+
+
+\author{
+  Joseph Molloy \\
+  IVT \\
+  ETH Zürich \\
+  CH-8093 Zurich \\
+  \texttt{joseph.molloy@ivt.baug.ethz.ch}
+  \and
+  Second Author \\
+  IVT \\
+  ETH Zurich
+  \and
+  Third Author \\
+  IVT \\
+  ETH Zurich
+  \and
+  Fourth Author \\
+  IVT \\
+  ETH Zurich
+}
+
+\reportdate{December 2019}
+\reportdategerman{Dezember 2019}
+\reportnumber{10XX}
+\titlefigure{figures/MATSimLoop}
+% The year of the paper
+% The month of the paper, include only: jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec
+% The day of the paper - include day in number 1,..., 12,..., 31
+
+
+%%%% If you don't want to include an english abstract page, comment out this command
+\abstract{
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut liquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ }
+
+%%% To inclue a second abstract page with german headings and a german abstract, use the command below
+\germanabstract{
+    Dieses Bericht....
+
+}
+
+\keywords{keyword1, keyword2, etc}
+
+\suggestedCitation{Fill in the suggested citation format for your paper here}
+
+\begin{document}
+\maketitle
+\clearpage
+%start the paper/report here
+
+%\clearpage
+%\tableofcontents
+%\clearpage
+%\listoffigures
+%\listoftables
+%\clearpage
+
+\tableofcontents
+\listoftables
+\listoffigures
+\newpage
+
+\input{Section1}
+\input{Section2}
+\input{Section3}
+\input{Section4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Bibliography
+%%   Leave this as is, and add you own entries to my.bib
+%%   Many references are already defined in _latexfiles/bibs/all-eng.bib
+%%   Refer to the BibTeX/LaTeX tutorial for adding new entries
+%%   to the IVT BibTeX database
+\nolinenumbers
+\bibliography{bib/references}
+%\bibliography{_latexfiles/bibs/all-eng,my}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Appendices
+%%   Usually they would start on a separate page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\input{App}
+
+\clearpage
+
+
+\end{document}
