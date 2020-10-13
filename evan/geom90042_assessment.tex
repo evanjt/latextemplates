@@ -1,0 +1,163 @@
+%% Assessment template for 
+%% GEOM90042: Spatial Information Programming
+%% 
+%% Authored by Evan Thomas evan@evanjt.com
+%% Last updated 13/10/2020
+
+%% -- 2020
+%% Released	
+%% Due		
+%% Weighting: 
+
+%% Assessment variables
+
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[english]{babel}
+\setlength{\parindent}{0pt}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\graphicspath{{./images/}}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\usepackage[a4paper, total={7in,9in}]{geometry}
+\newcommand{\AssignmentName}{Assessment [NUMBER]}
+\pagestyle{fancy}
+\fancyhf{}
+\usepackage[procnames]{listings}
+\lstset{language=Python, 
+        basicstyle=\ttfamily\small, 
+        showstringspaces=false,
+        procnamekeys={def,class}}
+\rhead{GEOM90042: Spatial Information Programming}
+\lhead{\AssignmentName}
+\rfoot{Page \thepage}
+\begin{document}
+
+{
+\centering 
+\huge{\AssignmentName: [DESCRIPTION]}\par
+}
+\section{Introduction}
+This is an [INDIVIDUAL/GROUP] assessment. It is worth [WEIGHTING] of your final class mark. No late submissions will be accepted.
+
+\section{Aim}
+The aim of this assessment is to ...
+
+\section{Assessment}
+
+
+\section{Questions}
+
+%% Task 1
+\subsection{Task 1: [DESCRIPTION]}
+
+\begin{enumerate}
+\item{Write a ...}
+
+\textbf{Note}: ... 
+
+%% Task 1, q2 
+\item{Write a ...}
+\item{Write a ...}
+
+%--Sub-enumeration (START)--
+\begin{enumerate}
+\item{Import ...}
+\item{Process a ...}
+\end{enumerate}
+%--Sub-enumeration (END)--
+\end{enumerate}
+
+% Task 2
+\subsection{Task 2: [DESCRIPTION]}
+\begin{enumerate}
+\item{Write a ...}
+
+\item{Write a ...}
+\end{enumerate}
+
+% Task 3
+\subsection{Task 3: [DESCRIPTION]}
+
+You will ...
+\begin{enumerate}
+\item{Compute the ...}
+\item{Compute the ...}
+\item{Compute the ...}
+\end{enumerate}
+
+% Code block example 
+\begin{lstlisting}
+
+	def main():
+	    # Setup constant
+	    csv_filename = "trajectory_data.csv"
+	    filename = os.path.join(os.getcwd(), csv_filename)
+		
+	    # Run tasks
+	    reprojected_data = task_1(filename)
+	    task_2()
+	    task_3(reprojected_data)
+		
+	    # Finished
+	    print("Program complete")
+		
+\end{lstlisting}
+
+% Sample data section
+\section{Sample data}
+\label{sec:sample_output}
+
+Below is an example of ...
+
+\section{Marking scheme}
+
+
+Your assessment will be marked out of ...
+\begin{itemize}
+\item{Your program ...}
+\item{Your program computes ...}
+\item{Your program is ...}
+\end{itemize}
+
+Note that only actual code counts as lines. Comments are not counted as lines, and you will lose marks if your comments are too sparse or missing. A very rough guideline: a program with 150 lines of codes has also the same amount of comments. 
+The table below shows detailed marking criteria associated with marks:\\
+
+\begin{center}
+\begin{tabular}{  l | l | c  }
+\toprule
+\textbf{Criteria} & \textbf{Sub-criteria} & \textbf{Mark}\\
+\midrule
+\multirow{2}{*}{Correctness} & Task completion, output correctness, unit tests pass, runs from console & 8\\
+  & Interoperability, special case and exception handling, use of main() & 2 \\
+%\hline
+\\
+%.sbn & \multirow{2}{*}{The spatial index} & ewdfs\\
+\multirow{2}{*}{Design} & Abstraction of problem, appropriate use of functions & 3\\
+ & Readability, elegance, code structure, PEP-8 conformity & 3\\
+%\hline
+\\
+\multirow{2}{*}{Documentation} & Understandability of function/variable names (self-documenting) & 2\\
+ & Commenting and documentation & 2\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+\section{Tips}
+[INSERT ANY TIPS HERE]
+
+\section{Submission}
+\label{sec:submission}
+Submit a single \textbf{.zip} file (where \textbf{studentno} is your student number) containing the following files for submission:\\
+
+\end{document}
